@@ -1,0 +1,48 @@
+# Fonts the dashboard needs. Build with the tooling in badgeware-af:
+#
+#   uv run --project ~/Development/badgeware/badgeware-af badgeware-fonts \
+#       --manifest fonts.toml build --loose --out fonts
+#
+# Coda and the Material Symbols are merged into one file so the labels and the
+# status icons come from a single face.
+
+[defaults]
+cap = 81
+
+[defaults.text]
+quality = 20
+
+[[font]]
+name = "coda-text"
+type = "text"
+source = "google:Coda"
+weight = 400
+charset = "latin"
+
+[[font]]
+name = "bluetti-icons"
+type = "icons"
+source = "material:outlined"
+corpus = "corpus/bluetti-symbols.txt"
+# At their own codepoints, from U+E000 up, clear of the text half of the merge.
+codepoints = "preserve"
+axes = { FILL = 1 }
+
+[[font]]
+name = "coda-symbols"
+type = "merge"
+parts = ["coda-text", "bluetti-icons"]
+
+[[font]]
+name = "dseg7-classic"
+type = "text"
+# The seven-segment face the readouts are drawn in.
+source = "github:keshikan/DSEG"
+release = "v0.46"
+asset = "fonts-DSEG_v046.zip"
+member = "DSEG7-Classic/DSEG7Classic-Bold.ttf"
+licence = "DSEG-LICENSE.txt"
+cap = 648
+quality = 100
+cap_from = "0"
+chars = " 0123456789:"

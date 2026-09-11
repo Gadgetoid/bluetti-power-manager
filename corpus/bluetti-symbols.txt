@@ -1,0 +1,20 @@
+# Material Symbols the dashboard draws, at their own codepoints.
+#
+#   name  codepoint
+
+# `eco` is malformed at FILL=1 - its outline and fill overlap in the one
+# glyph. energy_savings_leaf fills cleanly, and a leaf with a bolt in it suits
+# a power station anyway.
+energy_savings_leaf  ec1a
+mode_fan     f168
+solar_power  ec0f
+
+# Charge level next to the remaining-time readout: frame_1 is the emptiest.
+battery_android_frame_1     f257
+battery_android_frame_2     f256
+battery_android_frame_3     f255
+battery_android_frame_4     f254
+battery_android_frame_5     f253
+battery_android_frame_6     f252
+battery_android_frame_full  f24f
+battery_android_frame_bolt  f250

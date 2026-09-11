@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.ruff_cache/
+.DS_Store
+
+# The font tooling downloads its sources here and builds into dist/.
+build/
+dist/
+
+# The .af fonts are built from fonts.toml, not checked in. The licence text
+# beside them is, since a loose build does not emit it.
+bluetti_powman/fonts/*.af
